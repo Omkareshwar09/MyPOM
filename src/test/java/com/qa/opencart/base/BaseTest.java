@@ -15,8 +15,8 @@ import com.qa.opencart.pages.SearchPage;
 
 public class BaseTest
 {
-	 DriverFactory df;
-	 WebDriver driver;
+	DriverFactory df;
+	WebDriver driver;
 	protected Properties prop;
 	protected LoginPages loginPage;
 	protected AccountPage accPage;
@@ -29,7 +29,7 @@ public class BaseTest
 	{
 		df = new DriverFactory();
 		prop = df.initProperties();
-		driver = df.initDriver(prop);
+		driver = df.initDriver(prop); 
 		loginPage = new LoginPages(driver);
 	}
 

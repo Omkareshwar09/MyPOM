@@ -2,10 +2,8 @@ package com.qa.opencart.factory;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.aspectj.util.FileUtil;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.io.FileHandler;
-
 import com.qa.opencart.constant.AppConstant;
 import com.qa.opencart.exception.FrameworkException;
 
@@ -92,7 +88,7 @@ public class DriverFactory
 		prop = new Properties();
 		FileInputStream ip = null;
 		
-		String envName = System.getenv("environment");
+		String envName = System.getProperty("env");
 		System.out.println("Running the test cases on the "+envName);
 		
 		try

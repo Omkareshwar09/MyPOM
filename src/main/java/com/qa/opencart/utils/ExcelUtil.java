@@ -31,10 +31,10 @@ public class ExcelUtil
 			
 			for (int i = 0; i < sheet.getLastRowNum(); i++)
 			{
-				System.out.println("The Current value of i is : "+ i);
+//				System.out.println("The Current value of i is : "+ i);
 				for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++)
 				{
-					System.out.println("The Current value of j is : "+ j);
+//					System.out.println("The Current value of j is : "+ j);
 					data[i] [j] = sheet.getRow(i+1).getCell(j).toString(); 
 				}
 			}
